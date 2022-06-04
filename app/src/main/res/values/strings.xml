@@ -30,6 +30,8 @@
     <string name="three_screenshot_disabled_title">Disable swipe to screenshot</string>
     <string name="adb_disabled_title">Disable USB debugging</string>
     <string name="gamespace_menu_opacity_title">Overlay menu opacity level</string>
+    <string name="gamespace_show_overlay_title">Enable overlay menu</string>
+    <string name="gamespace_show_overlay_summary">Show a floating button which opens a window with quick actions on tap</string>
 
     <!-- Notification Mode -->
     <string name="notification_mode_title">Notification mode</string>

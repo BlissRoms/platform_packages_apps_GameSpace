@@ -89,6 +89,11 @@
             app:min="0"
             app:units="%" />
 
+        <SwitchPreference
+            android:key="gamespace_show_overlay"
+            android:summary="@string/gamespace_show_overlay_summary"
+            android:title="@string/gamespace_show_overlay_title" />
+
     </PreferenceCategory>
 
     <io.chaldeaprjkt.gamespace.preferences.AppListPreferences
