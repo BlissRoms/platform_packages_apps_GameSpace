@@ -92,7 +92,8 @@
         <SwitchPreference
             android:key="gamespace_show_overlay"
             android:summary="@string/gamespace_show_overlay_summary"
-            android:title="@string/gamespace_show_overlay_title" />
+            android:title="@string/gamespace_show_overlay_title"
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 
