@@ -44,6 +44,7 @@
             android:layout_marginTop="5dp"
             android:padding="8dp"
             android:scaleType="centerInside"
+            android:tint="@color/onBarBackground"
             android:src="@drawable/ic_panel" />
 
         <ImageButton
@@ -53,6 +54,7 @@
             android:layout_marginTop="5dp"
             android:padding="8dp"
             android:scaleType="centerInside"
+            android:tint="@color/onBarBackground"
             android:src="@drawable/ic_action_screenshot" />
 
         <ImageButton
@@ -60,6 +62,7 @@
             android:layout_width="@dimen/actions_size"
             android:layout_height="@dimen/actions_size"
             android:layout_marginTop="5dp"
+            android:tint="@color/onBarBackground"
             android:background="@drawable/ripple_circle_record"
             android:padding="8dp"
             android:scaleType="centerInside"
