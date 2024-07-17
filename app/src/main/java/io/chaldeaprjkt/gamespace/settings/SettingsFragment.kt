@@ -27,6 +27,8 @@ import dagger.hilt.android.AndroidEntryPoint
 import io.chaldeaprjkt.gamespace.R
 import io.chaldeaprjkt.gamespace.preferences.AppListPreferences
 import io.chaldeaprjkt.gamespace.preferences.appselector.AppSelectorActivity
+import io.chaldeaprjkt.gamespace.preferences.QuickStartAppPreference
+import io.chaldeaprjkt.gamespace.preferences.QuickStartAppPreferenceDialogFragment
 
 @AndroidEntryPoint(PreferenceFragmentCompat::class)
 class SettingsFragment : Hilt_SettingsFragment() {
@@ -70,5 +72,15 @@ class SettingsFragment : Hilt_SettingsFragment() {
     override fun onResume() {
         super.onResume()
         apps?.updateAppList()
+    }
+
+    override fun onDisplayPreferenceDialog(preference: Preference) {
+        if (preference is QuickStartAppPreference) {
+            val dialogFragment = QuickStartAppPreferenceDialogFragment.newInstance(preference.key)
+            dialogFragment.setTargetFragment(this, 0)
+            dialogFragment.show(parentFragmentManager, "QuickStartAppPreferenceDialogFragment")
+        } else {
+            super.onDisplayPreferenceDialog(preference)
+        }
     }
 }
