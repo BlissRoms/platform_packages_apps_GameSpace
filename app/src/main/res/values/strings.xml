@@ -38,7 +38,6 @@
     <string name="notification_mode_title">Notification mode</string>
     <string name="notification_mode_hide">Do not show</string>
     <string name="notification_mode_headsup">Show as Heads Up</string>
-    <string name="notification_mode_reticker">Show as reTicker</string>
     <string name="notification_mode_danmaku">Show as Danmaku</string>
 
     <!-- Ringer Mode -->

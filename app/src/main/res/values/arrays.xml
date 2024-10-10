@@ -52,7 +52,6 @@
     <string-array name="notification_mode_entries" translatable="false">
         <item>@string/notification_mode_hide</item>
         <item>@string/notification_mode_headsup</item>
-        <item>@string/notification_mode_reticker</item>
         <item>@string/notification_mode_danmaku</item>
     </string-array>
 
@@ -72,6 +71,5 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
-        <item>3</item>
     </string-array>
 </resources>
