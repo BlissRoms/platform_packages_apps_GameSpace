@@ -148,7 +148,9 @@ class GameBarService : Hilt_GameBarService() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        super.onStartCommand(intent, flags, startId)
+        if (::rootBarView.isInitialized && rootBarView.isAttachedToWindow) {
+            return START_STICKY
+        }
         when (intent?.action) {
             ACTION_STOP -> onActionStop()
             ACTION_START -> onActionStart()
@@ -163,8 +165,8 @@ class GameBarService : Hilt_GameBarService() {
     }
 
     override fun onDestroy() {
-        danmakuService.destroy()
         onActionStop()
+        danmakuService.destroy()
         super.onDestroy()
     }
 

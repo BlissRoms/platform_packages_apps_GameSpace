@@ -61,7 +61,7 @@ class CallListener @Inject constructor(
         telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_CALL_STATE)
     }
 
-    fun destory() {
+    fun destroy() {
         telephonyManager.listen(phoneStateListener, PhoneStateListener.LISTEN_NONE)
     }
 
