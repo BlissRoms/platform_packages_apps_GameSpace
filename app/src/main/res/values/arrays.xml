@@ -52,7 +52,7 @@
     <string-array name="notification_mode_entries" translatable="false">
         <item>@string/notification_mode_hide</item>
         <item>@string/notification_mode_headsup</item>
-        <item>@string/notification_mode_island</item>
+        <item>@string/notification_mode_reticker</item>
         <item>@string/notification_mode_danmaku</item>
     </string-array>
 
