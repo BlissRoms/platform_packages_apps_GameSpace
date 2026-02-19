@@ -24,5 +24,6 @@
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="android.permission.FOREGROUND_SERVICE" />
         <permission name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+        <permission name="android.permission.ACCESS_NOTIFICATION_POLICY" />
     </privapp-permissions>
 </permissions>

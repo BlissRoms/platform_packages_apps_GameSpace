@@ -32,6 +32,8 @@
     <string name="three_screenshot_disabled_title">Disable three fingers swipe gesture</string>
     <string name="adb_disabled_title">Disable USB debugging</string>
     <string name="gamespace_menu_opacity_title">Overlay menu opacity level</string>
+    <string name="auto_dnd_title">Auto Do Not Disturb</string>
+    <string name="auto_dnd_summary">Automatically enable DND when game starts and restore when game ends</string>
 
     <!-- Notification Mode -->
     <string name="notification_mode_title">Notification mode</string>

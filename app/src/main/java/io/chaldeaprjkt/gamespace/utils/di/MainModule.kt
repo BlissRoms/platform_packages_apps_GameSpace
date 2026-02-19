@@ -25,6 +25,7 @@ import dagger.hilt.components.SingletonComponent
 import io.chaldeaprjkt.gamespace.data.AppSettings
 import io.chaldeaprjkt.gamespace.data.GameSession
 import io.chaldeaprjkt.gamespace.data.SystemSettings
+import io.chaldeaprjkt.gamespace.utils.DndController
 import io.chaldeaprjkt.gamespace.utils.GameModeUtils
 import io.chaldeaprjkt.gamespace.utils.ScreenUtils
 import javax.inject.Singleton
@@ -52,6 +53,12 @@ object MainModule {
     @Singleton
     fun provideSystemSettings(@ApplicationContext context: Context, gameModeUtils: GameModeUtils) =
         SystemSettings(context, gameModeUtils)
+
+    @Singleton
+    @Provides
+    fun provideDndController(@ApplicationContext context: Context, appSettings: AppSettings): DndController {
+        return DndController(context, appSettings)
+    }
 
     @Provides
     @Singleton

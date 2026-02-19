@@ -32,6 +32,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import io.chaldeaprjkt.gamespace.data.AppSettings
 import io.chaldeaprjkt.gamespace.data.GameSession
 import io.chaldeaprjkt.gamespace.data.SystemSettings
+import io.chaldeaprjkt.gamespace.utils.DndController
 import io.chaldeaprjkt.gamespace.utils.GameModeUtils
 import io.chaldeaprjkt.gamespace.utils.ScreenUtils
 import io.chaldeaprjkt.gamespace.utils.isServiceRunning
@@ -60,6 +61,9 @@ class SessionService : Hilt_SessionService() {
 
     @Inject
     lateinit var callListener: CallListener
+
+    @Inject
+    lateinit var dndController: DndController
 
     private val scope = CoroutineScope(Job() + Dispatchers.IO)
     private var isRunning = false
@@ -145,6 +149,7 @@ class SessionService : Hilt_SessionService() {
         callListener.destroy()
 
         isRunning = false
+        dndController.onGameStop()
         super.onDestroy()
     }
 
@@ -169,6 +174,7 @@ class SessionService : Hilt_SessionService() {
                 gameBar.onGameStart()
                 screenUtils.stayAwake = appSettings.stayAwake
                 screenUtils.lockGesture = appSettings.lockGesture
+                dndController.onGameStart()
             } ?: run {
                 Log.e(TAG, "Command Intent is uninitialized. Stopping service.")
                 stopSelf()
